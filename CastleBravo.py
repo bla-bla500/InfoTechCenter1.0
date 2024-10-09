@@ -1,20 +1,26 @@
 import sys
 import time    # Make sure to import necessary libraries
 
+#colors
+RED = "\033[31m"
+GREEN = "\033[32m"
+YELLOW = "\033[33m"
+BLUE = "\033[34m"
+RESET = "\033[0m"
 
 print("\nWelcome to InfoTecCenter V1.0\n")
 
 """
-#a version I like better
+#version I like better (not tested for a while)
 
 x = 0
 while x < 100:
     x += 1
-    message = ("Loading", str(x) + '%')
+    message = ("Loading", str(x) + '%' + YELLOW)
     time.sleep(0.2)
     sys.stdout.write("\r" + str(message))
     if x == 100:
-        print("\rLoaded")
+        print(GREEN + "\rLoaded" + RESET)
 """
 
 #Stuff you want
@@ -27,7 +33,7 @@ while x != 20:
     x += 1  # Increment counter on each iteration
 
     # Construct the loading message with an increasing number of dots
-    message = ("Loading" + "." * ellipsis)
+    message = ("Loading" + "." * ellipsis + YELLOW)
     ellipsis += 1  # Increase ellipsis for the next iteration
 
     # Overwrite the previous line in the terminal with the new message
@@ -42,4 +48,4 @@ while x != 20:
 
     # Check if the loop has completed 20 iterations
     if x == 20:
-        print("\rLoaded")  # Print final message "Loaded" and overwrite the current line
+        print(GREEN + "\rLoaded" + RESET)  # Print final message "Loaded" and overwrite the current line
