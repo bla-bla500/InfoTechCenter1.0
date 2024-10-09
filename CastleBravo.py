@@ -1,5 +1,5 @@
 import sys
-import time
+import time    # Make sure to import necessary libraries
 
 
 print("\nWelcome to InfoTecCenter V1.0\n")
@@ -19,15 +19,27 @@ while x < 100:
 
 #Stuff you want
 
-x = 0
-ellipsis = 1
+x = 0  # Initialize counter for loop
+ellipsis = 1  # Start ellipsis counter to control dots in the loading message
+
+# Loop until x reaches 20
 while x != 20:
-    x += 1
+    x += 1  # Increment counter on each iteration
+
+    # Construct the loading message with an increasing number of dots
     message = ("Loading" + "." * ellipsis)
-    ellipsis += 1
+    ellipsis += 1  # Increase ellipsis for the next iteration
+
+    # Overwrite the previous line in the terminal with the new message
     sys.stdout.write("\r" + str(message))
-    time.sleep(0.1)
+
+    # Introduce a small delay to simulate loading
+    time.sleep(0.5)
+
+    # Reset ellipsis count back to 1 after it reaches 3 (for a looping effect of dots)
     if ellipsis == 4:
         ellipsis = 1
+
+    # Check if the loop has completed 20 iterations
     if x == 20:
-        print("\rLoaded")
+        print("\rLoaded")  # Print final message "Loaded" and overwrite the current line
