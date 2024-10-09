@@ -11,7 +11,7 @@ x = 0
 while x < 100:
     x += 1
     message = ("Loading", str(x) + '%')
-    time.sleep(0.1)
+    time.sleep(0.2)
     sys.stdout.write("\r" + str(message))
     if x == 100:
         print("\rLoaded")
