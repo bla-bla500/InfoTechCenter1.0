@@ -10,8 +10,11 @@ RESET = "\033[0m"
 
 print("\nWelcome to InfoTecCenter V1.0\n")
 
+timeToSleep = 1 #idk why we need to make this varible, but I was told to make it
+time.sleep(timeToSleep) #wait for a bit before starting system
+
 """
-#version I like better (not tested for a while)
+#version I like better (not tested)
 
 x = 0
 while x < 100:
@@ -23,7 +26,7 @@ while x < 100:
         print(GREEN + "\rLoaded" + RESET)
 """
 
-#Stuff you want
+#Stuff you wantwrite
 
 x = 0  # Initialize counter for loop
 ellipsis = 1  # Start ellipsis counter to control dots in the loading message
