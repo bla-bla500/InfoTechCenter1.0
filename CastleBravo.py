@@ -17,7 +17,7 @@ weatherAlert = weather()
 
 def VRS():
     if weatherAlert == "snowy":
-        return "The national Weather Serivce has update out alarm by 30 minutes because of the forcast of " + weatherAlert + " weather conditions."
+        return "The national Weather Service has update out alarm by 30 minutes because of the forcast of " + weatherAlert + " weather conditions."
     else:
         return "Fine"
 print(VRS())
