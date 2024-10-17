@@ -87,7 +87,7 @@ def VRS():
         print(f"\nVRS system has been engaged, only allowing you to drive {speedLimit} mph.")
     # For cloudy weather, provide a safe driving message
     elif weatherAlert == "cloudy":
-        print(f"\nThe NRS is predicting {weatherAlert} weather conditions. Drive safe.")
+        print(f"\nThe VRS is predicting {weatherAlert} weather conditions. Drive safe.")
     # If it's sunny, the VRS system will not engage
     else:
         print("\nVRS system has been disengaged")
