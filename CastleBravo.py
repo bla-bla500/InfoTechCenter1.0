@@ -1,3 +1,4 @@
+
 import sys
 import time    # Make sure to import necessary libraries
 
@@ -26,7 +27,7 @@ while x < 100:
         print(GREEN + "\rLoaded" + RESET)
 """
 
-#Stuff you wantwrite
+#Stuff you want write
 
 x = 0  # Initialize counter for loop
 ellipsis = 1  # Start ellipsis counter to control dots in the loading message
@@ -52,3 +53,45 @@ while x != 20:
     # Check if the loop has completed 20 iterations
     if x == 20:
         print(GREEN + "\rLoaded" + RESET)  # Print final message "Loaded" and overwrite the current line
+
+print("\n***************************************\n")
+print("Weather Branch\n")
+
+# Import libraries here
+import random  # Importing random to choose weather conditions
+
+# Define the weather function
+def weather():
+    weatherForcast = ["sunny", "rainy", "cloudy", "snowy", "icy", "windy"]
+    return random.choice(weatherForcast)  # More efficient random selection
+
+# Get a random weather alert from the weather() function
+weatherAlert = weather()
+
+# Dictionary to map weather conditions to speed limits and alarm times
+weather_conditions = {
+    "snowy": {"speedLimit": "55", "alarmTime": "30"},
+    "icy": {"speedLimit": "40", "alarmTime": "15"},
+    "rainy": {"speedLimit": "70", "alarmTime": "40"},
+    "windy": {"speedLimit": "80", "alarmTime": "45"},
+}
+
+# Define the VRS (Vehicle Regulation System) function
+def VRS():
+    # Check if weather is one that requires a speed limit and alarm adjustment
+    if weatherAlert in weather_conditions:
+        speedLimit = weather_conditions[weatherAlert]["speedLimit"]
+        alarmTime = weather_conditions[weatherAlert]["alarmTime"]
+        print(f"\nThe national Weather Service has updated our alarm by {alarmTime} minutes because of the forecast of {weatherAlert} weather conditions.")
+        time.sleep(1)  # Adding delay to simulate processing time
+        print(f"\nVRS system has been engaged, only allowing you to drive {speedLimit} mph.")
+    # For cloudy weather, provide a safe driving message
+    elif weatherAlert == "cloudy":
+        print(f"\nThe NRS is predicting {weatherAlert} weather conditions. Drive safe.")
+    # If it's sunny, the VRS system will not engage
+    else:
+        print("\nVRS system has been disengaged")
+
+# Call the VRS function to simulate the system response
+VRS()
+
