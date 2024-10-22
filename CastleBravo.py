@@ -26,8 +26,7 @@ def gasLevelAlert():
     elif gasLevel != "Full":  # Check if the gas level is not full
         print(f"Your gas tank is {gasLevel}")  # Inform user of current gas level
         if x <= 2:  # Change number to change how low tank has to be to show distance to nearest gas station
-            print(
-                f"Nearest gas station is {gasStation}, it is {milesToGasStation} miles away")  # Provide nearest gas station info
+            print(f"Nearest gas station is {gasStation}, it is {milesToGasStation} miles away")  # Provide nearest gas station info
     else:
         print("Refilled")  # Notify that the tank is full
 
