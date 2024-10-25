@@ -1,5 +1,3 @@
-
-
 import sys
 import time    # Make sure to import necessary libraries
 
@@ -25,7 +23,7 @@ while x < 100:
     time.sleep(0.2)
     sys.stdout.write("\r" + str(message))
     if x == 100:
-        print(GREEN + "\rLoaded" + RESET)
+        print(GREEN + "\rLoaded" + RESET)time.sleep(1)
 """
 
 #Stuff you want write
@@ -55,7 +53,8 @@ while x != 20:
     if x == 20:
         print(GREEN + "\rLoaded" + RESET)  # Print final message "Loaded" and overwrite the current line
 
-print("\n***************************************\n")
+time.sleep(1)
+print("\n***************************************")
 print("Weather Branch\n")
 
 # Import libraries here
@@ -91,13 +90,13 @@ def VRS():
         print(f"\nThe VRS is predicting {weatherAlert} weather conditions. Drive safe.")
     # If it's sunny, the VRS system will not engage
     else:
-        print("\nVRS system has been disengaged")
+        print("\nWeather clear, VRS system has been disengaged")
 
 # Call the VRS function to simulate the system response
 VRS()
 
-print("\n**********************************\n")
-
+time.sleep(1)
+print("\n***************************************")
 print("Gasoline Branch\n")
 
 
